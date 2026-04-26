@@ -1,0 +1,60 @@
+permissions:
+    - read:bitbucket.repository
+    - read:bitbucket.repository.pull_request
+    - write:bitbucket.repository.pull_request
+    - read:bitbucket.workspace.project
+    - read:jira-work
+    - read:jira.user
+    - read:confluence-content.all
+    
+scopes:
+    - read:pullrequest:bitbucket
+    - write:pullrequest:bitbucket
+    - read:jira-work
+    - write:jira-work
+
+capabilities:
+    - jiraEntityProperties:
+        - key: pr-orchestration-data
+          entityType: issue
+          schemas:
+            1: {}
+    
+modules:
+  - key: pr-orchestration-dashboard
+    location: jira.product.navigation.apps
+    title: PR Orchestration
+    resource: main
+    icon: https://icon-url-here.png
+  
+ 
+  - key: pr-detail-panel
+    location: bitbucket.repository.pullrequest.details.panel
+    title: Orchestration
+    resource: main
+  
+
+    bitbucket:mergeCheck:
+      - key: pr-flow-accelerator-merge-check
+        function: main
+        name: PR-Flow-Accelerator
+        description: A Bitbucket merge check example
+        triggers:
+          - on-code-pushed
+    function:
+        - key: main
+          handler: index.run
+resources:
+ - key: main
+   handler: index.run          
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/e3feb910-7797-44b5-b7f0-0cdd92730e69
+  name: PR Review Flow Accelerator
+  description: Accelerate your PR review process with automated checks and validations.
+  vendor:
+    name: Smoothstack
+    

@@ -1,0 +1,10 @@
+{
+  "name": "bitbucket-merge-check",
+  "title": "Custom merge check",
+  "description": "Enable a Forge app to define custom merge checks that can prevent pull requests from merging",
+  "link": "https://developer.atlassian.com/platform/forge/manifest-reference/modules/bitbucket-merge-check/",
+  "version": "1.1.2",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true
+}
