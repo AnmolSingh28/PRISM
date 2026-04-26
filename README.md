@@ -2,6 +2,8 @@ PRISM — Pull Request Intelligence & Selection Mechanism
 
 Ensuring domain experts review critical pull requests first, so important changes don't wait longer than they should.
 
+<img width="806" height="453" alt="image" src="https://github.com/user-attachments/assets/6cb1382c-c5be-4e94-8bfb-42582f077955" />
+
 [Watch Demo on Vimeo]
 (https://vimeo.com/1186726507)
 
