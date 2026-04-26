@@ -9,11 +9,11 @@ Ensuring domain experts review critical pull requests first, so important change
 
 Tech Stack-
 
-TypeScript, Node.js
-Atlassian Forge
-Bitbucket API
-Groq (LLaMA 3.1)
-React (Forge UI)
+1. TypeScript, Node.js
+2. Atlassian Forge
+3. Bitbucket API
+4. Groq (LLaMA 3.1)
+5. React (Forge UI)
 
 
 The Problem-
